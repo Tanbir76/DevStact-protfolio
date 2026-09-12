@@ -3,8 +3,11 @@ import logoTx from '../logo-text.png'
 
 function Nav() {
     return (
-        <div className='border-b border-b-blue-50  '>
-        <div className=" container mx-auto navbar sm:flex sm:justify-between py-4 ">
+        <nav className='sticky top-0 z-50 bg-white border-b border-blue-50 '>
+
+   
+
+        <div className=" container mx-auto flex justify-between py-4 ">
             <div className=" md:hidden ">
                 <div className="dropdown ">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -13,7 +16,7 @@ function Nav() {
                     <ul
                         tabIndex={-1}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3  p-2 shadow">
-                        <li><a>Home</a></li>
+                        <li className=' text-[#DB2777]'><a>Home</a></li>
                         <li><a>Technologies</a></li>
                         <li><a>Projects</a></li>
                         <li><a>About</a></li>
@@ -21,11 +24,11 @@ function Nav() {
                     </ul>
                 </div>
             </div>
-            <div className="">
+            <div>
                 <a className="btn btn-ghost text-xl"><img src={logoTx} alt="" /></a>
             </div>
             <div>
-                <ul className="hidden sm:block md:flex gap-2 md:gap-8 text-[16px]  font-[88px] text-[#475569] ">
+                <ul className="hidden md:flex gap-2 md:gap-8 text-[16px]  font-[88px] text-[#475569] ">
                     <li className=' text-[#DB2777]'><a>Home</a></li>
                     <li><a>Technologies</a></li>
                     <li><a>Projects</a></li>
@@ -39,8 +42,7 @@ function Nav() {
                 
             </div>
         </div>
-
-        </div>
+        </nav>
     );
 }
 

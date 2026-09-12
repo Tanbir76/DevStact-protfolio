@@ -3,10 +3,10 @@ import BannerImg from '../banner-stack.png'
 
 function Banner() {
     return (
-        <div className='container mx-auto flex justify-center items-center mt-20 py-10 '>
+        <div className='container mx-auto text-center md:text-left md:flex justify-center items-center mt-20 py-10 '>
             <div className='space-y-1  '>
-                <h1 className= 'font-bold md:font-black text-5xl text-[#0F172A]  '>Build Your Ideal</h1>
-                <h1 className='font-bold md:font-black  text-5xl bg-linear-to-r from-[#ff5622dc] via-[#db177cd8] to-[#5b06ee] bg-clip-text text-transparent'>Development Stack</h1>
+                <h1 className= 'font-bold md:font-black text-6xl text-[#0F172A]  '>Build Your Ideal</h1>
+                <h1 className='font-bold md:font-black  text-6xl bg-linear-to-r from-[#ff5622dc] via-[#db177cd8] to-[#5b06ee] bg-clip-text text-transparent'>Development Stack</h1>
                 <p className='md:w-[45%] text-[18px] text-[#475569] mt-6'>Explore frontend, backend, database, and tooling options,
                     compare them side by side, and put together the stack that fits your
                     next project.</p>
