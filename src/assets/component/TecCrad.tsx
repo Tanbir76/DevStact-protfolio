@@ -1,22 +1,30 @@
 import { MdOutlineStarPurple500 } from "react-icons/md";
 import type { CatagoryType } from "../type/CatagoryType";
-import { useState, type Dispatch, type SetStateAction } from "react";
+import {useState, type Dispatch, type SetStateAction } from "react";
 
 // import React from 'react';
 interface ItecCard {
-    tecData: CatagoryType;
+    tecData: CatagoryType ;
     useTecData: CatagoryType[];
-    setUseTecData: Dispatch<SetStateAction<CatagoryType[]>>
+    setUseTecData: Dispatch<SetStateAction<CatagoryType[]>>;
+      count: number;
+    setCount :Dispatch<SetStateAction<number>>;
+     chosen:boolean;
+    setChosen:Dispatch<SetStateAction<boolean>>;
 
 }
 
 
 
-function TecCrad({ tecData, useTecData, setUseTecData }: ItecCard) {
-    const handleTecData = (tecData: CatagoryType) => {
-        const newTecData = [...useTecData, tecData];
-        console.log(useTecData)
-        setUseTecData(newTecData);
+function TecCrad({ tecData, useTecData, setUseTecData, count, setCount, chosen, setChosen }: ItecCard) {
+
+    const handleTecData = () => {
+        // console.log(newTecData);
+        setUseTecData([...useTecData , tecData]);
+        setChosen(!chosen);
+        if(!chosen){
+            setCount(count + 1);
+        }
     }
 
     return (
@@ -38,7 +46,7 @@ function TecCrad({ tecData, useTecData, setUseTecData }: ItecCard) {
                         <p>{tecData.rating}</p>
                     </div>
                 </div>
-                <button onClick={() => handleTecData(tecData)} className="btn w-full mt-2 py-6 bg-black text-white text-[18px]">Add to Stack</button>
+                <button onClick={() => handleTecData()} className="btn w-full mt-2 py-6 bg-black text-white text-[18px]">Add to Stack</button>
             </div>
         </div>
     );
