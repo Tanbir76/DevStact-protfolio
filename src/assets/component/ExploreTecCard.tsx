@@ -55,7 +55,7 @@ export function ExploreTecCard({ tecData, useTecData, setUseTecData, count, setC
                     <p>{tecData.rating}</p>
                 </div>
             </div>          
-            <button onClick={() => handleTecData(tecData)} className={`btn w-full mt-2 py-5 text-[18px] ${isSelected === true ? "border-red-300 bg-[#e9646469] text-red-400 " : "  bg-black text-white"}`}>  {isSelected ? (<><FaCheck /> Add to Stack </>):('Add to Stack')}</button>
+            <button onClick={() => handleTecData(tecData)} className={`btn w-full mt-2 py-5 text-[18px] ${isSelected === true ? "border-red-300 bg-[#f0909044] text-red-400 " : "  bg-black text-white"}`}>  {isSelected ? (<><FaCheck /> Add to Stack </>):('Add to Stack')}</button>
         </div>
 
     )

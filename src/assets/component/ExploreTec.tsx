@@ -44,7 +44,7 @@ function ExploreTec({ exploreData }: ExploreData) {
                             : (<div className="w-full grid gap-2"> <SelectedCard useTecData={useTecData} setUseTecData={setUseTecData} count={count} setCount={setCount} /> </div>)}
 
                         {count === 0 ? ('') : (<button onClick={() => { setUseTecData([]); setCount(0); }}
-                            className="btn w-full mt-2 py-6 text-red-400 border border-red-400 text-[18px]">
+                            className="btn w-full mt-5 py-6 text-red-400 border border-red-400 text-[18px] bg-[#f0909044] ">
                             Remove All
                         </button>
                         )}

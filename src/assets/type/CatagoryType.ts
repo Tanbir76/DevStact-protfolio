@@ -1,5 +1,6 @@
 export interface CatagoryType {   
     id: string,
+    color:string;
     name: string,
     category: string,
     description: string,
