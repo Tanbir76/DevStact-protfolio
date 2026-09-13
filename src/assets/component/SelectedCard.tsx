@@ -23,7 +23,7 @@ function SelectedCard({ useTecData, setUseTecData, count ,setCount }: IselectedT
             {
                 useTecData.map((tecData: CatagoryType) => {
                     return (
-                        <StackCard key={tecData.name} tecData={tecData} setCount={setCount} setUseTecData={setUseTecData} handelRemoveTecData={handelRemoveTecData} />
+                        <StackCard key={tecData.name} tecData={tecData} handelRemoveTecData={handelRemoveTecData} />
 
                     )
                 })

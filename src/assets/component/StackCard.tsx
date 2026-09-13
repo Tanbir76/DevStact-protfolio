@@ -1,18 +1,14 @@
-// import React from 'react';
 
-import type { Dispatch, SetStateAction } from "react";
 import type { CatagoryType } from "../type/CatagoryType";
 import { HiOutlineX } from "react-icons/hi";
 // import ChoseCard from "./ChoseCard";
 interface IstackCard {
     tecData: CatagoryType;
-    setCount: Dispatch<SetStateAction<number>>;
-    setUseTecData: Dispatch<SetStateAction<CatagoryType[]>>
     handelRemoveTecData: (tecData: CatagoryType) => void;
 
 }
 
-function StackCard({ setUseTecData, tecData, handelRemoveTecData, setCount }: IstackCard) {
+function StackCard({ tecData, handelRemoveTecData }: IstackCard) {
     return (
         <div>
 

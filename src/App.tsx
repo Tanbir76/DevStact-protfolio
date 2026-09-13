@@ -9,7 +9,7 @@ import Footer from './assets/component/Footer'
 import FooterCopy from './assets/component/FooterCopy'
 
 const asyncPromise = async():Promise<CatagoryType[]> =>{
-  const res = await fetch('/public/data.json');
+  const res = await fetch('/data.json');
   const data = await res.json();
   return data;
 }
