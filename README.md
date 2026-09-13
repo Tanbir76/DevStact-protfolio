@@ -69,7 +69,3 @@ function Child({ onAdd }) {
   );
 } -->
 
-
-7. Answer:
- This are the six quesion should be depending or anthor question . 
- React project starting initially i use project run and set data for a browsor in JSON formate in a react project .then i was use in async in app() and promise should be await in a data for a fatching or useEffect and  then use hook for uses data  for calling in a async data .Thin data is  store and map() for a child component and add a uniqe key for a each component and display it .
