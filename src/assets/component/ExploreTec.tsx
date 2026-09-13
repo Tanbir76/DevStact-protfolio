@@ -2,17 +2,13 @@ import { use, useState } from "react";
 import type { CatagoryType } from "../type/CatagoryType";
 import { ExploreTecCard } from "./ExploreTecCard";
 import SelectedCard from "./SelectedCard";
-// import SelectedCard from "./SelectedCard";
 type ExploreData = {
     exploreData: Promise<CatagoryType[]>;
 }
 function ExploreTec({ exploreData }: ExploreData) {
     const exploreDataTec = use(exploreData);
     const [useTecData, setUseTecData] = useState<CatagoryType[]>([]);
-    const [count ,setCount] = useState<number>(0);
-     const [chosen, setChosen] = useState(false);
-
-     console.log(count);
+    const [count, setCount] = useState<number>(0);
 
 
     return (
@@ -27,7 +23,7 @@ function ExploreTec({ exploreData }: ExploreData) {
                                 return (
 
                                     <ExploreTecCard key={tecData.id} tecData={tecData} useTecData={useTecData} setUseTecData={setUseTecData} count={count} setCount={setCount}
-                                   chosen={chosen} setChosen={setChosen}/>
+                                    />
 
                                 )
 
@@ -42,20 +38,18 @@ function ExploreTec({ exploreData }: ExploreData) {
                 <div>
                     <div className=" rounded-2xl p-3 space-y-1.5 shadow">
                         <h1 className="font-bold text-[18px]">Youre Stack</h1>
-                        <h4 className=" text-[16px] text[#94A3B8]">({count})Tecnology selected</h4>
-                       
-                            <div className="w-full grid gap-2">
-                                <SelectedCard  useTecData={useTecData} setUseTecData={setUseTecData} />
+                        <h4 className="text-[16px] text-[#94A3B8]"> {count > 0 ? `${count} Technology Selected` : "No Technology Selected"} </h4>
+                        {/* Conditional rendering */}
+                        {count === 0 ? (<div className="text-center px-6 py-10 border-dashed border rounded-2xl border-[#94a3b8ab] text-[#94a3b8ea]"> <h3>Your stack is empty.</h3> </div>)
+                            : (<div className="w-full grid gap-2"> <SelectedCard useTecData={useTecData} setUseTecData={setUseTecData} count={count} setCount={setCount} /> </div>)}
 
-                            </div>
-                   
-                        <button className="btn w-full mt-2 py-6 text-red-400 border border-red-400 text-[18px]">Remove All</button>
                     </div>
+                    {count === 0 ? ('') : (<button onClick={() => {setUseTecData([]);setCount(0);}}
+                            className="btn w-full mt-2 py-6 text-red-400 border border-red-400 text-[18px]">
+                            Remove All
+                          </button>
+                    )}
                 </div>
-
-
-
-
             </div>
         </div>
     );
